@@ -15,6 +15,12 @@ This is a Streamlit web application for face recognition using a pre-trained YOL
 - **User-friendly Interface**: The Streamlit app provides a user-friendly interface for easy interaction.
 
 
+
+
+https://github.com/NikhilKalloli/Face-Recognition/assets/123582746/c8b7a8ce-c08e-4167-a201-479dd9674947
+
+
+
 ## Usage
 
 1. Clone the repository:
