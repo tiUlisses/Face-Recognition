@@ -27,7 +27,7 @@ This is a Streamlit web application for face recognition using a pre-trained YOL
     cd Face-Recognition
     ```
 
-3. Install the required dependencies:
+3. Install the required dependencies(in a virtual Environment):
     ```
     pip install -r requirements.txt
     ```

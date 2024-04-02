@@ -59,11 +59,20 @@ def faceRecognition(input_image):
             img_path = os.path.join(cropped_objects_dir, filename)
             model = DeepFace.find(img_path=img_path, db_path="database", enforce_detection=False, model_name="Facenet512")
 
+            # print("Model length:", len(model))
+            # print("Model:", model)
+
+
             # Check if a face was recognized in the image
             if model and len(model[0]['identity']) > 0:
                 # Extract the name and append it to the list
                 name = model[0]['identity'][0].split('/')[1]
-                
+
+                # name = model[0]['identity'][0].split('/')[0]
+   
+
+                print("Name:", name)
+
                 # Save the known face into the 'known' folder
                 known_faces_path = os.path.join(known_faces_dir, f"{name}.jpg")
                 totalKnownFaces+=1
@@ -73,6 +82,7 @@ def faceRecognition(input_image):
             else:
                 # If no face is recognized, set name to 'unknown'
                 name = 'unknown'
+                print("No face detected in:", img_path)
                 # Save the unknown face into the 'unknown' folder
                 unknown_faces_path = os.path.join(unknown_faces_dir, f"{totalUnknownFaces}.jpg")
                 totalUnknownFaces+=1
